@@ -9,6 +9,6 @@ def validate_a(a):
     
 
 class QuadraticForm(forms.Form):
-    a = forms.IntegerField(required=True,validators=[validate_a])
-    b = forms.IntegerField(required=True,)
-    c = forms.IntegerField(required=True,)
+    a = forms.FloatField(required=True,validators=[validate_a])
+    b = forms.FloatField(required=True,)
+    c = forms.FloatField(required=True,)
