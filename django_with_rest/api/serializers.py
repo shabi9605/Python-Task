@@ -3,6 +3,6 @@ from rest_framework import serializers
 
 
 class QuadraticSerializer(serializers.Serializer):
-    a = serializers.IntegerField()
-    b = serializers.IntegerField()
-    c = serializers.IntegerField()
+    a = serializers.FloatField()
+    b = serializers.FloatField()
+    c = serializers.FloatField()

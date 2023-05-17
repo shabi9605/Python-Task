@@ -1,12 +1,33 @@
 
-from rest_framework import viewsets
+from rest_framework.generics import GenericAPIView
 from rest_framework.response import Response
 from . serializers import QuadraticSerializer
+
+import math
 
 
 # Create your views here.
 
-class QuadraticViewSet(viewsets.ViewSet):
-    pass
+def calculate_x(a,b,c):
+    b_square = b**2
+    four_a_c = 4*a*c
+    if (b_square - four_a_c) < 0:
+        raise ValueError("Invalid Inputs")
+    square_root = math.sqrt(b_square - four_a_c)
+    x1 = (-b + square_root)/(2*a)
+    x2 = (-b - square_root)/(2*a)
+    return x1, x2
+
+class QuadraticViewSet(GenericAPIView):
+    def post(self, request):
+        serializer = QuadraticSerializer(data = request.data)
+        if serializer.is_valid():
+            a = request.data.get("a")
+            b = request.data.get("b")
+            c = request.data.get("c")
+            x1, x2 = calculate_x(a,b,c)
+            return Response({"x1":x1,"x2":x2})
+        else:
+            return Response("Invalid")
 
 
