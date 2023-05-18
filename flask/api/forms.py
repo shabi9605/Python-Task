@@ -1,5 +1,7 @@
 from marshmallow import Schema, fields, validates, ValidationError
 
+
+# in flask e use marshmallow schema instaed of forms in django
 class QuadraticForm(Schema):
     a = fields.Float(required=True)
     b = fields.Float(required=True)
