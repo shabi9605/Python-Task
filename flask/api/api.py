@@ -1,10 +1,9 @@
-from json import dumps, loads
-from flask import Flask, jsonify, request
+
+from flask import Flask, request
 import json
 from forms import QuadraticForm
 from calculate_x import calculate_x
 from marshmallow import ValidationError
-import jsonpickle
 
 # to run flask you can use 'flask run' command or 'python -m flask run'
 
