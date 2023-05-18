@@ -10,6 +10,8 @@ flask = "*"
 gevent = "*"
 marshmallow = "*"
 jsonpickle = "*"
+fastapi = "*"
+uvicorn = {extras = ["standard"], version = "*"}
 
 [dev-packages]
 
