@@ -3,7 +3,9 @@ from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 import json
 from . forms import QuadraticForm
+
 import math
+
 
 # Create your views here.
 
@@ -23,6 +25,7 @@ def quadratic_eqn(request):
             return JsonResponse(form.errors,safe=False)
         
 
+
 def calculate_x(a,b,c):
     b_square = b**2
     four_a_c = 4*a*c
@@ -32,6 +35,4 @@ def calculate_x(a,b,c):
     x1 = (-b + square_root)/(2*a)
     x2 = (-b - square_root)/(2*a)
     return x1, x2
-
-
         
