@@ -25,9 +25,12 @@ class QuadraticViewSet(GenericAPIView):
             a = request.data.get("a")
             b = request.data.get("b")
             c = request.data.get("c")
-            x1, x2 = calculate_x(a,b,c)
-            return Response({"x1":x1,"x2":x2})
+            try:
+                x1, x2 = calculate_x(a,b,c)
+                return Response({"x1":x1,"x2":x2})
+            except ValueError:
+                return Response({"error":"Invalid Input"})
         else:
-            return Response("Invalid")
+            return Response(serializer.errors)
 
 
