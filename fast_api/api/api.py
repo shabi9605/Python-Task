@@ -9,6 +9,9 @@ from calculate_x import calculate_x
 
 app = FastAPI()
 
+# to run fast api
+# checkout api folder
+# type this command - uvicorn api:app --reload
 
 # created custom exception handler
 @app.exception_handler(RequestValidationError)
