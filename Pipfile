@@ -12,6 +12,7 @@ marshmallow = "*"
 jsonpickle = "*"
 fastapi = "*"
 uvicorn = {extras = ["standard"], version = "*"}
+starlette = "*"
 
 [dev-packages]
 
