@@ -9,6 +9,9 @@ from pydantic import ValidationError
 from calculate_x import calculate_x
 
 
+# for running starlette
+# checkout api folder and type this command 
+# uvicorn api:app --reload
 
 
 async def homepage(request:Request):
