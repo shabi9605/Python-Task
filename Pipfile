@@ -13,6 +13,7 @@ jsonpickle = "*"
 fastapi = "*"
 uvicorn = {extras = ["standard"], version = "*"}
 starlette = "*"
+sanic = "*"
 
 [dev-packages]
 
