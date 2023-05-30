@@ -36,7 +36,6 @@ def calculate_x(a,b,c):
 # forms.py section
 def validate_a(a):
     if a == 0:
-        print("hi")
         raise forms.ValidationError("The value of a not equal to zero") 
     
     
