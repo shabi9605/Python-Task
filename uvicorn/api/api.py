@@ -32,7 +32,7 @@ async def app(scope, receive, send):
         'type': 'http.response.start',
         'status': 200,
         'headers': [
-            (b'content-type', b'text/plain'),
+            (b'content-type', b'text/json'),
             (b'content-length', str(len(data)).encode())
         ]
     })
