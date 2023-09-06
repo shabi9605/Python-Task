@@ -11,7 +11,7 @@ gevent = "*"
 marshmallow = "*"
 jsonpickle = "*"
 fastapi = "*"
-uvicorn = {extras = ["standard"], version = "*"}
+uvicorn = "*"
 starlette = "*"
 sanic = "*"
 gunicorn = "*"
