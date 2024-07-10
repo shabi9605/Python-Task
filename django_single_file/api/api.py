@@ -9,6 +9,7 @@ import json
 from django import forms
 from django.core import validators
 
+# python api.py runserver
 
 # settings configuration
 settings.configure(
